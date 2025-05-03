@@ -5,12 +5,12 @@ public class Main {
         try {
             TiendaVirtual tienda = new TiendaVirtual();
 
-            Producto laptop = new ProductoElectronico("Laptop Gaming", 1200.0, 5, 24);
+            Producto laptop = new ProductoElectronico("Laptop ", 1200.0, 5, 24);
             Producto camiseta = new ProductoRopa("Camiseta Algodón", 25.0, 10, "M");
             tienda.agregarProducto(laptop);
             tienda.agregarProducto(camiseta);
 
-            Usuario cliente = new Usuario("Juan Pérez", "juan@email.com");
+            Usuario cliente = new Usuario("lorena", "lorena@email.com");
             tienda.registrarUsuario(cliente);
 
             tienda.mostrarInventario();
@@ -18,7 +18,7 @@ public class Main {
             cliente.getCarrito().agregarProducto(laptop);
             cliente.getCarrito().agregarProducto(camiseta);
 
-            MetodoPago tarjeta = new PagoTarjeta("1234567890123456");
+            MetodoPago tarjeta = new PagoTarjeta("123456789012344");
             tienda.realizarCompra(cliente, tarjeta);
 
             tienda.mostrarInventario();
